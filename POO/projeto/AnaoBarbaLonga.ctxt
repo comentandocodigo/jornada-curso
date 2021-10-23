@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=AnaoBarbaLonga
+comment1.params=nome
+comment1.target=AnaoBarbaLonga(java.lang.String)
+comment2.params=nome\ sorteador
+comment2.target=AnaoBarbaLonga(java.lang.String,\ Sorteador)
+comment3.params=
+comment3.target=void\ sofrerDano()
+numComments=4

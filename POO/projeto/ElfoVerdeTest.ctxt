@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ElfoVerdeTest
+comment1.params=
+comment1.target=void\ elfoVerdeGanha2XPPorAtaque()
+comment2.params=
+comment2.target=void\ adicionarItemComDescricaoValidaNoElfoVerde()
+comment3.params=
+comment3.target=void\ adicionarItemComDescricaoInvalidaNoElfoVerde()
+comment4.params=
+comment4.target=void\ perderItemComDescricaoValidaNoElfoVerde()
+comment5.params=
+comment5.target=void\ perderItemComDescricaoInvalidaNoElfoVerde()
+numComments=6

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=ElfoVerde
+comment1.params=nome
+comment1.target=ElfoVerde(java.lang.String)
+comment2.params=descricao
+comment2.target=boolean\ descricaoValida(java.lang.String)
+comment3.params=item
+comment3.target=void\ ganharItem(Item)
+comment4.params=item
+comment4.target=void\ perderItem(Item)
+numComments=5
