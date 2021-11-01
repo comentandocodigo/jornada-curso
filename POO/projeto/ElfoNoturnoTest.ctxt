@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=ElfoNoturnoTest
-comment1.params=
-comment1.target=void\ elfoNoturnoGanha3XPPorAtaque()
-comment2.params=
-comment2.target=void\ elfoNoturnoPerde15HPPorAtaque()
-comment3.params=
-comment3.target=void\ elfoNoturnoMorreApos7Ataques()
-numComments=4
