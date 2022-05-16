@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
+<!-- Active URL: https://ondras.zarovi.cz/sql/demo/?keyword=default -->
+<sql>
+<datatypes db="oracle">
+  <group label="Numeric" color="rgb(238,238,170)">
+    <type label="Integer" length="0" sql="INTEGER" quote=""/>
+    <type label="TINYINT" length="0" sql="TINYINT" quote=""/>
+    <type label="SMALLINT" length="0" sql="SMALLINT" quote=""/>
+    <type label="MEDIUMINT" length="0" sql="MEDIUMINT" quote=""/>
+    <type label="INT" length="0" sql="INT" quote=""/>
+    <type label="BIGINT" length="0" sql="BIGINT" quote=""/>
+    <type label="Decimal" length="1" sql="DECIMAL" re="DEC" quote=""/>
+    <type label="Single precision" length="0" sql="FLOAT" quote=""/>
+    <type label="Double precision" length="0" sql="DOUBLE" re="DOUBLE" quote=""/>
+  </group>
+
+  <group label="Character" color="rgb(255,200,200)">
+    <type label="Char" length="1" sql="CHAR" quote="'"/>
+    <type label="Varchar" length="1" sql="VARCHAR" quote="'"/>
+    <type label="Text" length="0" sql="MEDIUMTEXT" re="TEXT" quote="'"/>
+    <type label="Binary" length="1" sql="BINARY" quote="'"/>
+    <type label="Varbinary" length="1" sql="VARBINARY" quote="'"/>
+    <type label="BLOB" length="0" sql="BLOB" re="BLOB" quote="'"/>
+  </group>
+
+  <group label="Date &amp; Time" color="rgb(200,255,200)">
+    <type label="Date" length="0" sql="DATE" quote="'"/>
+    <type label="Time" length="0" sql="TIME" quote="'"/>
+    <type label="Datetime" length="0" sql="DATETIME" quote="'"/>
+    <type label="Year" length="0" sql="YEAR" quote=""/>
+    <type label="Timestamp" length="0" sql="TIMESTAMP" quote="'"/>
+  </group>
+
+  <group label="Miscellaneous" color="rgb(200,200,255)">
+    <type label="ENUM" length="1" sql="ENUM" quote=""/>
+    <type label="SET" length="1" sql="SET" quote=""/>
+    <type label="Bit" length="0" sql="bit" quote=""/>
+  </group>
+</datatypes><table x="77" y="53" name="PAIS">
+<row name="ID_PAIS" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+</row>
+<row name="NOME" null="0" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>'NULL'</default></row>
+<key type="PRIMARY" name="">
+<part>ID_PAIS</part>
+</key>
+</table>
+<table x="333" y="54" name="ESTADO">
+<row name="ID_ESTADO" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="ID_PAIS_PAIS" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="PAIS" row="ID_PAIS" />
+</row>
+<row name="NOME" null="0" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>'NULL'</default></row>
+<key type="PRIMARY" name="">
+<part>ID_ESTADO</part>
+</key>
+</table>
+<table x="202" y="261" name="CIDADE">
+<row name="ID_CIDADE" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="ID_ESTADO_ESTADO" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="ESTADO" row="ID_ESTADO" />
+</row>
+<row name="NOME" null="0" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>'NULL'</default></row>
+<key type="PRIMARY" name="">
+<part>ID_CIDADE</part>
+</key>
+</table>
+<table x="498" y="235" name="BAIRRO">
+<row name="ID_BAIRRO" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="ID_CIDADE_CIDADE" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="CIDADE" row="ID_CIDADE" />
+</row>
+<row name="NOME" null="0" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>'NULL'</default></row>
+<key type="PRIMARY" name="">
+<part>ID_BAIRRO</part>
+</key>
+</table>
+<table x="127" y="633" name="BANCO">
+<row name="CODIGO" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="NOME" null="0" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>'NULL'</default></row>
+<key type="PRIMARY" name="">
+<part>CODIGO</part>
+</key>
+</table>
+<table x="694" y="598" name="AGENCIA">
+<row name="CODIGO" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="CODIGO_BANCO" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="BANCO" row="CODIGO" />
+</row>
+<row name="ID_ENDERECO_ENDERECO" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="ENDERECO" row="ID_ENDERECO" />
+</row>
+<row name="NOME" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>CODIGO</part>
+</key>
+</table>
+<table x="724" y="213" name="ENDERECO">
+<row name="ID_ENDERECO" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="ID_BAIRRO_BAIRRO" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="BAIRRO" row="ID_BAIRRO" />
+</row>
+<row name="LOGRADOURO" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="NUMERO" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="COMPLEMENTO" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="CEP" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="CODIGO_AGENCIA" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="AGENCIA" row="CODIGO" />
+</row>
+<key type="PRIMARY" name="">
+<part>ID_ENDERECO</part>
+</key>
+</table>
+<table x="1082" y="430" name="CONTAS">
+<row name="CODIGO" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="CODIGO_AGENCIA" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="AGENCIA" row="CODIGO" />
+</row>
+<row name="SALDO" null="1" autoincrement="0">
+<datatype>DECIMAL</datatype>
+<default>0</default></row>
+<key type="PRIMARY" name="">
+<part>CODIGO</part>
+</key>
+</table>
+<table x="1529" y="216" name="CORRENTISTAS">
+<row name="ID_CORRENTISTA" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="NOME" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="CPF" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>ID_CORRENTISTA</part>
+</key>
+</table>
+<table x="1051" y="208" name="ENDERECO_X_CORRENTISTAS">
+<row name="ID_ENDERECO_ENDERECO" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="ENDERECO" row="ID_ENDERECO" />
+</row>
+<row name="ID_CORRENTISTA_CORRENTISTAS" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="CORRENTISTAS" row="ID_CORRENTISTA" />
+</row>
+<key type="PRIMARY" name="">
+<part>ID_ENDERECO_ENDERECO</part>
+<part>ID_CORRENTISTA_CORRENTISTAS</part>
+</key>
+</table>
+<table x="1382" y="672" name="MOVIMENTACAO">
+<row name="ID_MOVIMENTACAO" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="CODIGO_CONTAS" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="CONTAS" row="CODIGO" />
+</row>
+<row name="TIPO_MOVIMENTACAO" null="1" autoincrement="0">
+<datatype>ENUM</datatype>
+<default>NULL</default></row>
+<row name="VALOR" null="1" autoincrement="0">
+<datatype>DECIMAL</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>ID_MOVIMENTACAO</part>
+</key>
+</table>
+<table x="1377" y="425" name="CONTA_X_CORRENTISTA">
+<row name="CODIGO_CONTAS" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="CONTAS" row="CODIGO" />
+</row>
+<row name="ID_CORRENTISTA_CORRENTISTAS" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="CORRENTISTAS" row="ID_CORRENTISTA" />
+</row>
+<row name="TIPO" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>CODIGO_CONTAS</part>
+<part>ID_CORRENTISTA_CORRENTISTAS</part>
+</key>
+</table>
+</sql>
