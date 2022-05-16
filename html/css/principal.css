@@ -1,0 +1,339 @@
+/*
+ #principal {
+  color: aqua;
+}
+.todos {}
+body header .todos {}
+#principal, .todos, body {} */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header website bank */
+
+header {
+  width: 100%;
+  height: 56px;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 70px calc(100% - 300px) 130px;
+  justify-content: center;
+  gap: 12px;
+  font-weight: bold;
+  position: fixed;
+  box-shadow: 0px 1px 1px #11111120;
+}
+
+header article {
+  padding: 11px;
+}
+
+header article img.logo{
+  height: 30px;
+}
+
+header nav ul li {
+  float: left;
+  margin-right: 15px;
+  list-style: none;
+  color: black;
+  display: inline-flex;
+}
+
+header article.login {
+  padding: 19px;
+}
+
+header article.login a {
+  text-decoration: none;
+  color: #820bd1;
+  display: inline-flex;
+}
+
+/* End Header website bank */
+
+main {
+  width: 100%;
+  height: 7000px;
+}
+
+main section {
+  height: calc(100% / 7);
+}
+
+/* Site W3C */
+main section#principal {
+  background-image: url("../imagens/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(12, 6.6666%);
+  padding: 80px 48px;
+  gap: 32px;
+  align-content: center;
+  box-sizing: border-box;
+}
+
+main section#principal article {
+  grid-column: 2 / span 5;
+}
+
+section#principal article h1 {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+section#principal article h2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 35px;
+  color: #ffffff;
+}
+
+main section#principal section {
+  height: 330px;
+  grid-area: 1 / 10 / auto / span 3;
+  place-self: flex-end;
+}
+
+section#principal section form {
+  width: 320px;
+  height: calc(100% - 20px);
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+section#principal section form h3 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 30px;
+  margin: 0 0 32px;
+}
+
+section#principal section form input {
+  width: 95%;
+  border-width: 0 0 1px;
+  font-size: 16px;
+  padding: 10px 0;
+  color: #222;
+  margin: 10px 0;
+}
+
+section#principal section form button {
+  border-radius: 30px;
+  padding: 13px 21px;
+  font-size: 18px;
+  margin-top: 40px;
+  display: flex;
+  border: none;
+  width: 95%;
+  justify-content: space-between;
+  color: #11111120;
+  background-color: #11111110;
+  height: 48px;
+}
+
+section#credito {
+  background-color: #ffffff;
+}
+
+section.cinza-fundo {
+  background-color: #e0e0e0;
+}
+
+section#banner2 {
+  background-image: url("../imagens/banner-novo.png");
+  background-position: center;
+  background-size: cover;
+}
+
+section#banner3 {
+  background-image: url("../imagens/banner-2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+section#banner4 {
+  background-image: url("../imagens/banner-3.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+section.secundarias {
+  display: grid;
+  grid-template-columns: 600px 550px;
+  justify-content: center;
+}
+
+section.secundarias article {
+  height: 400px;
+  align-self: center;
+}
+
+section.secundarias article.imagem {
+  height: 500px;
+}
+
+section.secundarias article.imagem img {
+  width: 100%;
+}
+
+section.secundarias article.imagem img.app {
+  height: 100%;
+  width: auto;
+}
+
+section.secundarias article a {
+  color: #820ad1;
+  text-decoration: none;
+}
+
+section.secundarias article a.titulo {
+  font-size: 48px;
+}
+
+section.secundarias article p {
+  font-size: 48px;
+  margin: 10px 0 40px;
+}
+
+section.secundarias article a.saiba {
+  font-size: 18px;
+  display: flex;
+}
+
+section#banner2 article a.saiba, section#banner2 article p,
+section#banner3 article a.saiba, section#banner3 article p,
+section#banner4 article a.saiba, section#banner4 article p {
+  color: #ffffff;
+}
+
+.cor-branca {
+  color: #ffffff;
+}
+
+aside {
+  width: 100%;
+  height: 800px;
+  background-color: #111111;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  padding: 3%;
+  box-sizing: border-box;
+}
+
+aside section {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+aside section p {
+  color: #ffffff;
+  font-weight: 100;
+}
+
+aside section a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+aside section a:hover {
+  color: #820bd1;
+}
+
+aside section .material-icons {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer {
+  width: 100%;
+  height: 380px;
+  background-color: #111111;
+  border-top: 1px solid #191919;
+}
+
+footer section#registro {
+  display: grid;
+  grid-template-columns: 98px 9fr 2fr;
+  border-bottom: 1px solid #191919;
+  padding: 80px 56px;
+}
+
+footer section#registro img {
+  height: 30px;
+}
+
+footer section#registro article p {
+  color: #ffffff;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+footer section#registro article#social {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer section#registro article#social a {
+  margin-left: 32px;
+  align-self: center;
+}
+
+footer section#registro article#social img {
+  height: 20px;
+}
+
+footer section#idioma {
+  padding: 40px 56px;
+}
+
+footer section#idioma ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-content: center;
+  justify-content: flex-end;
+}
+
+footer section#idioma ul li {
+  margin-left: 40px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+footer section#idioma ul li .input-radio {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+footer section#idioma ul li label {
+  display: flex;
+}
+
+footer section#idioma ul li .radio-btn {
+  height: 14px;
+  width: 14px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+footer section#idioma ul li input[type=radio]:checked + label .radio-btn {
+  background: radial-gradient(circle, #ffffff 45%, transparent 50%);
+}
